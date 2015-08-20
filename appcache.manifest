@@ -2,52 +2,6 @@ CACHE MANIFEST
 
 
 CACHE:
-./index.html
-./lojas.html
-./manifest.json
-./css/main.css
-./img/entrada.jpg
-./img/icon.png
-./js/main.js
-./layout/footer.html
-./loja/a-sorveteria.html
-./loja/adidas.html
-./loja/bacio-di-latte.html
-./loja/brooksfield.html
-./loja/burberry.html
-./loja/cavalera.html
-./loja/centauro.html
-./loja/farm.html
-./loja/forum.html
-./loja/galetos.html
-./loja/le-lis-blanc.html
-./loja/ofner.html
-./loja/os-sapatos.html
-./loja/pizza-hut.html
-./loja/shoulder.html
-./loja/so-sapatos.html
-./loja/tip-top.html
-./js/vendor/jquery-1.11.3.min.js
-./js/vendor/jquery.min.js
-./js/vendor/jquery.smoothState.min.js
-./js/vendor/materialize-0.97.0.min.js
-./js/vendor/modernizr-2.8.3.min.js
-./img/loja/adidas%20copy.jpg
-./img/loja/adidas.jpg
-./img/loja/bacio-di-latte.jpg
-./img/loja/brooksfield.jpg
-./img/loja/burberry.jpg
-./img/loja/cavalera.jpg
-./img/loja/centauro.jpg
-./img/loja/farm.jpg
-./img/loja/forum.jpg
-./img/loja/galetos.jpg
-./img/loja/le-lis-blanc.jpg
-./img/loja/ofner.jpg
-./img/loja/pizza-hut.jpg
-./img/loja/shoulder.jpg
-./img/loja/so-sapatos.jpg
-./img/loja/tip-top.jpg
 
 
 NETWORK:
@@ -57,4 +11,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 981a98e490bda106ca6d5098b9ab2b19b82d88ccd76b66bf9d2b88e95bb15b8d
+# hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
