@@ -24,6 +24,8 @@ CACHE:
 ./loja/shoulder.html
 ./loja/so-sapatos.html
 ./loja/tip-top.html
+./js/vendor/jquery.min.js
+./js/vendor/materialize-0.97.0.min.js
 ./img/loja/adidas.jpg
 ./img/loja/bacio-di-latte.jpg
 ./img/loja/brooksfield.jpg
@@ -39,8 +41,6 @@ CACHE:
 ./img/loja/shoulder.jpg
 ./img/loja/so-sapatos.jpg
 ./img/loja/tip-top.jpg
-./js/vendor/jquery.min.js
-./js/vendor/materialize-0.97.0.min.js
 
 
 NETWORK:
@@ -50,4 +50,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 9885e60619fbe1486383cb289eb52b8a2eefc659a5fc03b8abc7eb0b68851047
+# hash: 4223222133a3c43ba0a3a9ce21a2081a3761e6e4de691876b4bd02b358db606b
