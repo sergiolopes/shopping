@@ -1,0 +1,142 @@
+@import '//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700';
+@import '//fonts.googleapis.com/icon?family=Material+Icons';
+@import 'materialize';
+
+html {
+	background-color: #E86C13;
+    height: 100%;
+}
+
+body {
+	background-color: #F2F2F2;
+	min-height: 100%;
+    min-width: 320px;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* estilo do titulo */
+.titulo {
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* cor da aba */
+.tabs .indicator {
+    background-color: white;
+}
+
+/* fixo no topo */
+.topo-fixo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+	@media(min-width: 600px) {
+		position: absolute;
+	}
+
+    a {
+    	color: inherit;
+    }
+}
+
+/* uncss:ignore */
+.unloading {
+	background-color: #F2F2F2;
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+
+	transform: translate3d(-300%,0,0);
+	transition: transform 1500ms ease-out;
+}
+
+@keyframes loading {
+	from { transform: translate3d(100%,0,0); }
+	to { transform: translate3d(0,0,0); }
+}
+
+.loading {
+	background-color: #F2F2F2;
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+
+	animation: loading 1s;
+}
+
+.lojas .section {
+    padding-top: 125px;
+}
+
+img {
+	max-width: 100%;
+}
+
+.parallax-container {
+	height: 240px;
+	z-index: 1;
+
+	a {
+    	color: white;
+    	display: block;
+    	position: absolute;
+    	z-index: 100;
+    }
+}
+
+.home {
+	background-color: #F57F16;
+	background: url(../img/entrada.jpg) center top;
+	background-size: cover;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+
+	h1 {
+		background: #ffb300;
+	    color: white;
+	    font-family: Roboto, Arial, sans-serif;
+	    margin-top: auto;
+	    margin-bottom: 1.5em;
+	    font-size: 2em;
+	    text-align: center;
+	    padding: 10px 0;
+	    text-transform: uppercase;
+	}
+
+	.opcoes {
+		margin-bottom: 2em;
+
+		display: flex;
+		justify-content: space-around;
+	}
+
+	a {
+		background-color: white;
+		border-radius: 5px;
+		color: #444;
+		display: block;
+		padding: 1em;
+		width: 40%;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	i {
+		display: block;
+		margin-bottom: 12px;
+		font-size: 4.5em;
+	}
+}
