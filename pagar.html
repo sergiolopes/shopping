@@ -41,6 +41,40 @@
     </div>
 </div>
 
+<div class="row">
+	<form class="col s12" action="pago.html" method="post">
+
+		<div class="row">
+			<div class="input-field col s10">
+				<input id="codigo" type="number" class="validate" placeholder="123456789">
+				<label for="codigo">Número do Ticket</label>
+			</div>
+
+			<div class="col s2">
+				<button class="waves-effect btn-floating code-scan orange" type="button">
+					<i class="material-icons">camera</i>
+				</button>
+			</div>
+
+			<div class="input-field col s12">
+				<input id="cardnumber" type="number" class="validate" autocomplete="cc-number">
+				<label for="cardnumber">Cartão de crédito</label>
+			</div>
+
+			<div class="input-field col s6">
+				<input id="exp-date" type="number" class="validate" autocomplete="cc-csc">
+				<label for="exp-date">Vencimento</label>
+			</div>
+			<div class="input-field col s6">
+				<input id="cvc" type="number" class="validate" autocomplete="cc-exp">
+				<label for="cvc">Código</label>
+			</div>
+		</div>
+
+		<button class="btn waves-effect waves-light" type="submit">Pagar</button>
+	</form>
+</div>
+
 
 </main>
 

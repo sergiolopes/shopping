@@ -7,6 +7,7 @@ CACHE:
 ./manifest.json
 ./pagar.html
 ./test.html
+./css/main.css
 ./icons/MaterialIcons-Regular.ttf
 ./icons/material.css
 ./img/entrada.jpg
@@ -27,7 +28,6 @@ CACHE:
 ./loja/so-sapatos.html
 ./loja/tip-top.html
 ./js/main.js
-./css/main.css
 ./img/loja/adidas.jpg
 ./img/loja/bacio-di-latte.jpg
 ./img/loja/brooksfield.jpg
@@ -54,4 +54,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 0c8614d95d15f1f24854fe6799d3d40d7ede7e7b793c3d5f288737aef2e06f6a
+# hash: 86f908deda75614032f1540d82f029f563135d2953348a27c02230d44f2e600a
