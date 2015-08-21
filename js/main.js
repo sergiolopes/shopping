@@ -1,10 +1,13 @@
 $(document).on('pageload', function(){
 	$('.parallax').parallax();
 	$('.tabs').tabs();
+	$('.dropdown-button').dropdown();
 });
 
 void function(){
 	$(document).trigger('pageload', this.href);
+
+	if (!('pushState' in window.history)) return;
 
 	var $body = $('body'),
 		$page = $('.current-page');
