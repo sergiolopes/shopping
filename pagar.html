@@ -4,12 +4,27 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Pagar Estacionamento</title>
-    <meta name="description" content="">
+    <meta name="description" content="WebApp de exemplo">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#F77F00">
+    <link rel="stylesheet" href="./css/main.css">
+    
     <link rel="manifest" href="./manifest.json">
 
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="./img/icon.png">
+    <meta name="theme-color" content="#F77F00">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-title" content="Shopping">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" href="./img/icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="./img/icon.png">
+    <meta name="msapplication-TileColor" content="#F77F00">
+
 </head>
 <body>
 <div class="current-page">
@@ -41,12 +56,12 @@
     </div>
 </div>
 
-<div class="row">
-	<form class="col s12" action="pago.html" method="post">
+<div class="row card-panel">
+	<form class="col s12" method="post">
 
 		<div class="row">
 			<div class="input-field col s10">
-				<input id="codigo" type="number" class="validate" placeholder="123456789">
+				<input id="codigo" type="number" class="validate">
 				<label for="codigo">Número do Ticket</label>
 			</div>
 
@@ -71,7 +86,7 @@
 			</div>
 		</div>
 
-		<button class="btn waves-effect waves-light" type="submit">Pagar</button>
+		<button class="btn waves-effect waves-light">Pagar</button>
 	</form>
 </div>
 
