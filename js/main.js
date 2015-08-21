@@ -13,6 +13,8 @@ void function(){
 		$page = $('.current-page');
 
 	function load(url) {
+		console.log('Load', url);
+
 		$page.addClass('unloading');
 		(function(el) { setTimeout(function(){
 			el.remove();
@@ -20,25 +22,31 @@ void function(){
 
 		$page = $('<div/>').appendTo($body);
 
-		window.history.pushState({}, '', url);
-
 		$page.load(url + ' main', function() {
 			$(document).trigger('pageload', this.href);
 			$body.scrollTop(0);
 		});
-
-		event.preventDefault();
 	}
 
 	$body.on('click', 'a', function(event){
 		var href = this.getAttribute('href');
 		if (href.indexOf('#') == 0 || href.indexOf(':') >= 0) return;
 		
-		load(this.href);
+		href = this.href;
+
+		console.log('pushState', href);
+		window.history.pushState({push:true}, '', href);
+
+		load(href);
+
+		event.preventDefault();
 	});
 
 	window.onpopstate = function(event) {
-		load(location.href);
+		console.log('Popstate', location.href);
+		if (event.state && event.state.push) {
+			load(location.href);	
+		}
 	};
 
 }();
