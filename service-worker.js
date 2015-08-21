@@ -18,15 +18,13 @@ var files = [
   "lojas.html",
   "manifest.json",
   "pagar-estacionamento.html",
-  "css/main.css",
-  "icons/MaterialIcons-Regular.ttf",
-  "icons/material.css",
   "img/entrada.jpg",
   "img/icon.png",
   "js/main.js",
   "js/palestra.js",
-  "js/vendor/jquery.min.js",
-  "js/vendor/materialize-0.97.0.min.js",
+  "icons/MaterialIcons-Regular.ttf",
+  "icons/material.css",
+  "css/main.css",
   "img/loja/adidas.jpg",
   "img/loja/bacio-di-latte.jpg",
   "img/loja/brooksfield.jpg",
@@ -41,7 +39,9 @@ var files = [
   "img/loja/pizza-hut.jpg",
   "img/loja/shoulder.jpg",
   "img/loja/so-sapatos.jpg",
-  "img/loja/tip-top.jpg"
+  "img/loja/tip-top.jpg",
+  "js/vendor/jquery.min.js",
+  "js/vendor/materialize-0.97.0.min.js"
 ];
 // dev only
 files = files || ['index.html'];
@@ -49,7 +49,7 @@ files = files || ['index.html'];
 // index as home
 files.push('./');
 
-var CACHE_NAME = 'shopping-v7';
+var CACHE_NAME = 'shopping-v8';
 
 self.addEventListener('activate', function(event) {
   console.log('[SW] Activate');
