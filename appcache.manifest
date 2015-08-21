@@ -2,49 +2,6 @@ CACHE MANIFEST
 
 
 CACHE:
-./index.html
-./lojas.html
-./manifest.json
-./pagar.html
-./test.html
-./css/main.css
-./icons/MaterialIcons-Regular.ttf
-./icons/material.css
-./img/entrada.jpg
-./img/icon.png
-./js/main.js
-./loja/adidas.html
-./loja/bacio-di-latte.html
-./loja/brooksfield.html
-./loja/burberry.html
-./loja/cavalera.html
-./loja/centauro.html
-./loja/farm.html
-./loja/forum.html
-./loja/galetos.html
-./loja/le-lis-blanc.html
-./loja/ofner.html
-./loja/pizza-hut.html
-./loja/shoulder.html
-./loja/so-sapatos.html
-./loja/tip-top.html
-./js/vendor/jquery.min.js
-./js/vendor/materialize-0.97.0.min.js
-./img/loja/adidas.jpg
-./img/loja/bacio-di-latte.jpg
-./img/loja/brooksfield.jpg
-./img/loja/burberry.jpg
-./img/loja/cavalera.jpg
-./img/loja/centauro.jpg
-./img/loja/farm.jpg
-./img/loja/forum.jpg
-./img/loja/galetos.jpg
-./img/loja/le-lis-blanc.jpg
-./img/loja/ofner.jpg
-./img/loja/pizza-hut.jpg
-./img/loja/shoulder.jpg
-./img/loja/so-sapatos.jpg
-./img/loja/tip-top.jpg
 
 
 NETWORK:
@@ -54,4 +11,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 495d0f340ebf37e578de7833966d35eb956353df53b03c93982335ca795e7608
+# hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
