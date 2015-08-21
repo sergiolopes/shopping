@@ -13,7 +13,7 @@ function handleError(err) {
 }
 
 gulp.task('static', function() {
-    gulp.src(['./src/js/**/*', './src/img/**/*', './src/manifest.json', './src/.nojekyll'], {base: './src/'})
+    gulp.src(['./src/js/**/*', './src/img/**/*', './src/icons/**/*', './src/manifest.json', './src/.nojekyll'], {base: './src/'})
         .pipe(gulp.dest('./dist'));
 });
 
@@ -24,7 +24,8 @@ gulp.task('sass', function() {
         }))
         .pipe($.sass().on('error', $.util.log))
         .pipe($.uncss({
-            html: ['dist/**/*.html']
+            html: ['dist/**/*.html'],
+            ignore: [/.*waves.*/, /.*input.*/]
         }))
         .pipe($.autoprefixer())
         .pipe($.cssnano())
@@ -38,8 +39,7 @@ gulp.task('html', function() {
             errorHandler: handleError
         }))
         .pipe($.ejs({
-            dados: dados,
-            rootPath: '.'
+            dados: dados
         }).on('error', $.util.log))
         .pipe(gulp.dest('./dist/'));
 
@@ -49,8 +49,7 @@ gulp.task('html', function() {
                 errorHandler: handleError
             }))
             .pipe($.ejs({
-                loja: loja,
-                rootPath: '.'
+                loja: loja
             }).on('error', $.util.log))
             .pipe($.rename(loja.url))
             .pipe(gulp.dest('./dist/'));
@@ -64,10 +63,34 @@ gulp.task('manifest', function(){
       preferOnline: true,
       network: ['*'],
       filename: 'appcache.manifest',
-      exclude: 'appcache.manifest',
+      exclude: ['appcache.manifest', 'service-worker.js'],
       relativePath: './'
      }))
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('sw-precache', function(callback) {
+  var path = require('path');
+  var swPrecache = require('sw-precache');
+  var rootDir = 'dist/';
+
+  swPrecache.write(path.join(rootDir, 'service-worker.js'), {
+    staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,gif,ttf}'],
+    stripPrefix: rootDir
+  }, callback);
+});
+
+gulp.task('my-service-worker', function(callback) {
+  gulp.src(['**/*.*', '!appcache.manifest', '!service-worker.js', '!files.json'], {cwd: 'dist'})
+    .pipe($.filelist('files.json'))
+    .pipe($.replace('dist/', ''))
+    .pipe($.replace('[', 'var files = ['))
+    .pipe($.replace(']', '];'))
+    .pipe(gulp.dest('dist'));
+
+  gulp.src(['dist/files.json', 'src/service-worker.js'])
+      .pipe($.concat('service-worker.js'))
+      .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function() {
@@ -91,11 +114,11 @@ gulp.task('sync', function() {
 });
 
 gulp.task('clean:manifest', function(cb) {
-    del(['dist/appcache.manifest'], cb);
+    del(['dist/appcache.manifest', 'dist/service-worker.js'], cb);
 });
 
 gulp.task('clean', function(cb) {
-    del(['dist'], cb);
+    del(['dist', '.publish'], cb);
 });
 
 gulp.task('ghpages', function() {

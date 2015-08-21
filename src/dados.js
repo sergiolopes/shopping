@@ -102,8 +102,8 @@ var categorias = {};
 
 lojas.forEach(function(loja){
     loja.id = slug(loja.nome, {lower: true});
-    loja.url = '/loja/' + loja.id + '.html';
-    loja.img = '/img/loja/' + loja.id + '.jpg';
+    loja.url = 'loja-' + loja.id + '.html';
+    loja.img = 'img/loja/' + loja.id + '.jpg';
 
     if (!categorias[loja.categoria]) {
         var categoria = {

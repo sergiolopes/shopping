@@ -1,5 +1,4 @@
-@import '//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700';
-@import '//fonts.googleapis.com/icon?family=Material+Icons';
+@import '../../icons/material';
 @import 'materialize';
 
 html {
@@ -14,6 +13,18 @@ body {
     max-width: 600px;
     margin: 0 auto;
     position: relative;
+
+    font-family: 
+		/* android 5 */
+    	Roboto, 
+		/* iOS 8+ */
+    	-apple-system-font, 
+		/* Windows Phone */
+    	'Segoe UI', 
+		/* OSX */
+    	'Helvetica Neue', 
+		/* fallback */
+    	Helvetica, Arial, sans-serif;
 }
 
 /* estilo do titulo */
@@ -26,6 +37,10 @@ body {
 /* cor da aba */
 .tabs .indicator {
     background-color: white;
+}
+
+.collection {
+	font-size: 18px;
 }
 
 /* fixo no topo */
@@ -54,8 +69,14 @@ body {
 	height: 100vh;
 	overflow: hidden;
 
+	/* efeito slide */
 	transform: translate3d(-300%,0,0);
 	transition: transform 1500ms ease-out;
+
+	/* efeito diminuir */
+	opacity: 0;
+	transform: scale(0);
+	transition: transform 500ms ease-out, opacity 600ms;
 }
 
 @keyframes loading {
@@ -75,8 +96,12 @@ body {
 	animation: loading 1s;
 }
 
-.lojas .section {
+.lojas {
     padding-top: 125px;
+}
+
+.pagar {
+	padding-top: 75px;	
 }
 
 img {
@@ -107,36 +132,40 @@ img {
 	h1 {
 		background: #ffb300;
 	    color: white;
-	    font-family: Roboto, Arial, sans-serif;
 	    margin-top: auto;
-	    margin-bottom: 1.5em;
+	    margin-bottom: 1.25em;
 	    font-size: 2em;
 	    text-align: center;
 	    padding: 10px 0;
 	    text-transform: uppercase;
 	}
 
-	.opcoes {
-		margin-bottom: 2em;
+	.collection {
+		margin-bottom: 1.6em;
 
-		display: flex;
-		justify-content: space-around;
+		.collection-item {
+			color: #444;
+		}
+
+		.material-icons {
+			margin: 0.2em;
+			vertical-align: middle;
+		}
+	}
+}
+
+.pagar {
+	padding-bottom: 40px;
+
+	.btn {
+		width: 100%;
 	}
 
-	a {
-		background-color: white;
-		border-radius: 5px;
-		color: #444;
-		display: block;
-		padding: 1em;
-		width: 40%;
-		text-align: center;
-		text-transform: uppercase;
-	}
+	.code-scan {
+		margin-top: 1em;
 
-	i {
-		display: block;
-		margin-bottom: 12px;
-		font-size: 4.5em;
+		i {
+			font-size: 30px;
+		}
 	}
 }
