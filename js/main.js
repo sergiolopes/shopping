@@ -61,7 +61,7 @@ $('body').on('submit', 'form', function(){
 
 if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
   navigator.serviceWorker.register('./service-worker.js', {
-    scope: './'
+    scope: './shopping/'
   }).then(function(registration) {
     // Check to see if there's an updated version of service-worker.js with new files to cache:
     // https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#service-worker-registration-update-method
