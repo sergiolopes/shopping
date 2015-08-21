@@ -47,7 +47,7 @@ var files = [
 files = files || ['index.html'];
 
 // index as home
-files.push('/');
+files.push('./');
 
 var CACHE_NAME = 'shopping-v7';
 
