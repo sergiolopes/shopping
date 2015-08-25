@@ -2,6 +2,13 @@ $(document).on('pageload', function(){
 	$('.parallax').parallax();
 	$('.tabs').tabs();
 	$('.dropdown-button').dropdown();
+  $('.modal-trigger').leanModal({
+    dismissible: true,
+    opacity: .5,
+    complete: function() { 
+      $(document).trigger('modalclose');
+    }
+  });
 });
 
 void function(){
@@ -10,7 +17,7 @@ void function(){
 	if (!('pushState' in window.history)) return;
 
 	var $body = $('body'),
-		$page = $('.current-page');
+		  $page = $('.current-page');
 
 	function load(url) {
 		console.log('Load', url);
@@ -104,3 +111,50 @@ if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || wi
     console.error('Error during service worker registration:', e);
   });
 }
+
+
+$('body').on('click', '.code-scan', function() {
+  Quagga.init({
+    inputStream : {
+      name : "Live",
+      type : "LiveStream"
+    },
+    decoder : {
+      readers : ["code_128_reader"]
+    },
+    tracking: true,
+    controls: true,
+    locate: true
+  }, function(err) {
+      if (err) {
+          console.log(err);
+          return
+      }
+      console.log("Initialization finished. Ready to start");
+      Quagga.start();
+  });
+
+  Quagga.onDetected(function(result) {
+    var code = result.codeResult.code;
+    $(document).trigger('codefound', code);
+  });
+
+});
+
+$(document).on('modalclose', function() {
+  Quagga.stop();
+});
+
+$(document).on('codefound', function(event, code) {
+  console.log('Achei código de barras', code);
+  try {
+    $('#scan').closeModal();
+    Quagga.stop();    
+  } finally {
+    $('#codigo').val(code).focus();  
+  }
+});
+
+$('body').on('click', '.codetest', function(event) {
+  $(document).trigger('codefound', '8745642');
+});

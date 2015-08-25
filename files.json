@@ -27,6 +27,8 @@ var files = [
   "js/palestra.js",
   "js/vendor/jquery.min.js",
   "js/vendor/materialize-0.97.0.min.js",
+  "js/vendor/quagga.js",
+  "js/vendor/quagga.min.js",
   "img/loja/adidas.jpg",
   "img/loja/bacio-di-latte.jpg",
   "img/loja/brooksfield.jpg",

@@ -16,9 +16,9 @@
     <meta name="theme-color" content="#F77F00">
 
     <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-title" content="Shopping">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Shopping">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="apple-touch-icon-precomposed" href="img/icon.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
@@ -66,9 +66,9 @@
 			</div>
 
 			<div class="col s2">
-				<button class="waves-effect btn-floating code-scan orange" type="button">
+				<a class="waves-effect btn-floating code-scan orange modal-trigger" href="#scan">
 					<i class="material-icons">camera</i>
-				</button>
+				</a>
 			</div>
 
 			<div class="input-field col s12">
@@ -90,6 +90,14 @@
 	</form>
 </div>
 
+<div id="scan" class="modal">
+	<div class="modal-content">
+		<h5>Escaneie o Ticket</h5>
+		<!-- <p><em>(para testar, <button class="codetest">clique aqui</button> para carregar uma imagem de ticket pronta)</em></p> -->
+
+		<div id="interactive" class="viewport"></div>
+	</div>
+</div>
 
 </main>
 
@@ -97,6 +105,7 @@
 
 <script src="js/vendor/jquery.min.js"></script>
 <script src="js/vendor/materialize-0.97.0.min.js"></script>
+<script src="js/vendor/quagga.min.js"></script>
 <script src="js/main.js"></script>
 
 </body>
