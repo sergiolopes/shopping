@@ -168,4 +168,23 @@ img {
 			font-size: 30px;
 		}
 	}
+
+	.modal {
+		height: 80%;
+		max-height: 80%;
+
+		.btn {
+			display: inline-block;
+			font-size: 90%;
+			width: auto;
+			padding: 0 10px;
+			margin: 4px;
+		}
+	}
+
+	#interactive {
+		transform: scale(0.4);
+		transform-origin: 0 0;
+		position: absolute;
+	}
 }
