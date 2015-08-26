@@ -57,7 +57,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('manifest', function(){
-  gulp.src(['dist/**/*.*'])
+  return gulp.src(['dist/**/*.*'])
     .pipe($.appcache({
       hash: true,
       preferOnline: true,
@@ -69,21 +69,23 @@ gulp.task('manifest', function(){
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('service-worker', function(callback) {
-  gulp.src(['**/*.*', '!appcache.manifest', '!service-worker.js', '!files.json'], {cwd: 'dist'})
+gulp.task('filelist', function() {
+  return gulp.src(['**/*.*', '!appcache.manifest', '!service-worker.js', '!files.json'], {cwd: 'dist'})
     .pipe($.filelist('files.json'))
     .pipe($.replace('dist/', ''))
     .pipe($.replace('[', 'var files = ['))
     .pipe($.replace(']', '];'))
     .pipe(gulp.dest('dist'));
+});
 
-  gulp.src(['dist/files.json', 'src/service-worker.js'])
+gulp.task('service-worker', ['filelist'], function() {
+  return gulp.src(['dist/files.json', 'src/service-worker.js'])
       .pipe($.concat('service-worker.js'))
       .pipe(gulp.dest('dist'));
 });
 
 gulp.task('dev-service-worker', function(callback) {
-  gulp.src(['src/service-worker.js'])
+  return gulp.src(['src/service-worker.js'])
       .pipe($.concat('service-worker.js'))
       .pipe(gulp.dest('dist'));
 });
@@ -122,5 +124,4 @@ gulp.task('ghpages', function() {
 });
 
 gulp.task('build', $.sequence('html', ['sass', 'static']));
-gulp.task('deploy', ['build', 'manifest', 'service-worker', 'ghpages']);
 gulp.task('default', ['clean:manifest', 'dev-service-worker', 'build', 'watch', 'sync']);
