@@ -60,7 +60,7 @@
 	<form class="col s12" method="post">
 
 		<div class="row">
-			<div class="input-field col s10">
+			<div class="input-field col s8">
 				<input id="codigo" type="number" class="validate">
 				<label for="codigo">Número do Ticket</label>
 			</div>
@@ -76,11 +76,11 @@
 				<label for="cardnumber">Cartão de crédito</label>
 			</div>
 
-			<div class="input-field col s6">
+			<div class="input-field col s4">
 				<input id="exp-date" type="text" class="validate" autocomplete="cc-exp">
 				<label for="exp-date">Vencimento</label>
 			</div>
-			<div class="input-field col s6">
+			<div class="input-field col s3">
 				<input id="cvc" type="text" class="validate" autocomplete="cc-csc">
 				<label for="cvc">Código</label>
 			</div>
@@ -93,8 +93,7 @@
 <div id="scan" class="modal">
 	<div class="modal-content">
 		<h5>Escaneie o Ticket</h5>
-		<!-- <p><em>(para testar, <button class="codetest">clique aqui</button> para carregar uma imagem de ticket pronta)</em></p> -->
-
+		<div><button class="btn orange codetest">carregar teste</button> <button class="btn orange modal-close">fechar</button></div>
 		<div id="interactive" class="viewport"></div>
 	</div>
 </div>
@@ -105,8 +104,13 @@
 
 <script src="js/vendor/jquery.min.js"></script>
 <script src="js/vendor/materialize-0.97.0.min.js"></script>
-<script src="js/vendor/quagga.min.js"></script>
+<script src="js/spa.js"></script>
 <script src="js/main.js"></script>
+<script src="js/install.js"></script>
+
+<script src="js/pagamento.js"></script>
+<script src="js/vendor/quagga.min.js"></script>
+<script src="js/barcode.js"></script>
 
 </body>
 </html>

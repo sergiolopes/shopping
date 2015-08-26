@@ -2,7 +2,6 @@ CACHE MANIFEST
 
 
 CACHE:
-./files.json
 ./index.html
 ./loja-adidas.html
 ./loja-bacio-di-latte.html
@@ -27,8 +26,12 @@ CACHE:
 ./icons/material.css
 ./img/entrada.jpg
 ./img/icon.png
+./img/ticket.png
+./js/barcode.js
+./js/install.js
 ./js/main.js
-./js/palestra.js
+./js/pagamento.js
+./js/spa.js
 ./img/loja/adidas.jpg
 ./img/loja/bacio-di-latte.jpg
 ./img/loja/brooksfield.jpg
@@ -46,7 +49,6 @@ CACHE:
 ./img/loja/tip-top.jpg
 ./js/vendor/jquery.min.js
 ./js/vendor/materialize-0.97.0.min.js
-./js/vendor/quagga.js
 ./js/vendor/quagga.min.js
 
 
@@ -57,4 +59,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 2769d4b068dcb68d4d6f18669fcbe4f3ddc81ee21415c159d04d60040d631295
+# hash: 3b01ddfea6783d78fa02da763f07fc5424631ce713b607fa6f40f08a4c09aa81

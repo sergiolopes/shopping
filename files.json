@@ -23,12 +23,12 @@ var files = [
   "icons/material.css",
   "img/entrada.jpg",
   "img/icon.png",
+  "img/ticket.png",
+  "js/barcode.js",
+  "js/install.js",
   "js/main.js",
-  "js/palestra.js",
-  "js/vendor/jquery.min.js",
-  "js/vendor/materialize-0.97.0.min.js",
-  "js/vendor/quagga.js",
-  "js/vendor/quagga.min.js",
+  "js/pagamento.js",
+  "js/spa.js",
   "img/loja/adidas.jpg",
   "img/loja/bacio-di-latte.jpg",
   "img/loja/brooksfield.jpg",
@@ -43,5 +43,8 @@ var files = [
   "img/loja/pizza-hut.jpg",
   "img/loja/shoulder.jpg",
   "img/loja/so-sapatos.jpg",
-  "img/loja/tip-top.jpg"
+  "img/loja/tip-top.jpg",
+  "js/vendor/jquery.min.js",
+  "js/vendor/materialize-0.97.0.min.js",
+  "js/vendor/quagga.min.js"
 ];
