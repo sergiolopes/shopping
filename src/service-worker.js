@@ -1,8 +1,9 @@
 // dev only
-files = files || ['index.html'];
-
-// index as home
-files.push('./');
+if (typeof files == 'undefined') {
+  var files = [];
+} else {
+  files.push('./');
+}
 
 var CACHE_NAME = 'shopping-v9';
 
@@ -42,4 +43,9 @@ self.addEventListener('fetch', function(event) {
       return response || fetch(event.request.clone());
     })
   );
+});
+
+self.addEventListener('notificationclick', function(event) {
+  console.log('On notification click: ', event);
+  clients.openWindow('/');
 });
