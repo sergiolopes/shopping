@@ -25,6 +25,11 @@
     <meta name="msapplication-TileImage" content="img/icon.png">
     <meta name="msapplication-TileColor" content="#F77F00">
 
+    <script>
+    if (window.location.protocol != "https:" && window.location.hostname == "sergiolopes.github.io")
+        window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+    </script>
+
 </head>
 <body>
 <div class="current-page">
