@@ -41,4 +41,6 @@ void function(){
 		}
 	};
 
+	window.history.replaceState({push:true}, '', location.href);
+
 }();

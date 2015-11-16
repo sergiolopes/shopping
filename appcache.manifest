@@ -2,6 +2,7 @@ CACHE MANIFEST
 
 
 CACHE:
+./files.json
 ./index.html
 ./loja-adidas.html
 ./loja-bacio-di-latte.html
@@ -59,4 +60,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 2e82a1383826e2c1119efbaf856636a1b58a990812870cd58a7e17b695474228
+# hash: fb4337bb4b7ca55dca942234efcb592bf0b3d87e98083a1a864ff3e4ceda83ac

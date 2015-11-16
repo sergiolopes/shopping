@@ -1,6 +1,6 @@
 {
   "short_name": "Shopping",
-  "name": "Shopping App Demo",
+  "name": "O Shopping",
   "icons": [
     {
       "src": "img/icon.png",
@@ -10,5 +10,7 @@
   ],
   "start_url": "index.html",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "theme_color": "#F77F00",
+  "background_color": "#FFB400"
 }
