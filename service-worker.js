@@ -55,7 +55,7 @@ if (typeof files == 'undefined') {
   files.push('./');
 }
 
-var CACHE_NAME = 'shopping-v11';
+var CACHE_NAME = 'shopping-v12';
 
 self.addEventListener('activate', function(event) {
   console.log('[SW] Activate');
