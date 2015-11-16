@@ -13,7 +13,7 @@ E abra http://localhost:3000
 ### Deploy
 
 ```
-gulp build && gulp ghpages
+gulp clean && gulp build && gulp service-worker && gulp manifest && gulp ghpages
 ```
 
 Abra: https://sergiolopes.github.io/shopping/
