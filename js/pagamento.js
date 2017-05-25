@@ -1,4 +1,40 @@
-$('body').on('submit', 'form', function(){
+if(window.PaymentRequest) {
+  console.log('Tentando pagar pelo browser!');
+  try {
+    var payreq = new PaymentRequest(
+      [{ supportedMethods: ['basic-card'] }],
+      {  
+        total: {
+          label: 'Estacionamento diário',  
+          amount:{  
+            currency: 'BRL',  
+            value: 10
+          }  
+        }
+      },
+      {}
+    );
+    document.body.classList.add('payment-api-available');
+    $('body').on('submit', 'form', function() {
+      payreq.show()
+        .then(finalizaCompra)
+        .catch(function(){
+          Materialize.toast('Problemas com a Payment Request API', 4000);
+        });
+
+      return false;
+    });
+  } catch(e) {
+    console.error(e);
+    $('body').on('submit', 'form', finalizaCompra);
+  }
+
+} else {  
+  $('body').on('submit', 'form', finalizaCompra);
+}
+
+
+function finalizaCompra(){
   Materialize.toast('Só testes, não enviei o cartão, claro', 4000);
   $('form')[0].reset();
 
@@ -26,4 +62,4 @@ $('body').on('submit', 'form', function(){
   }
 
 	return false;
-});
+}

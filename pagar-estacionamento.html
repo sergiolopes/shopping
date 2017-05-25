@@ -76,20 +76,23 @@
 				</a>
 			</div>
 
-			<div class="input-field col s12">
-				<input id="cardnumber" type="text" class="validate" autocomplete="cc-number">
-				<label for="cardnumber">Cartão de crédito</label>
-			</div>
+			<div class="hide-if-payment-request-api-available">
+				<div class="input-field col s12">
+					<input id="cardnumber" type="text" class="validate" autocomplete="cc-number">
+					<label for="cardnumber">Cartão de crédito</label>
+				</div>
 
-			<div class="input-field col s4">
-				<input id="exp-date" type="text" class="validate" autocomplete="cc-exp">
-				<label for="exp-date">Vencimento</label>
-			</div>
-			<div class="input-field col s3">
-				<input id="cvc" type="text" class="validate" autocomplete="cc-csc">
-				<label for="cvc">Código</label>
+				<div class="input-field col s4">
+					<input id="exp-date" type="text" class="validate" autocomplete="cc-exp">
+					<label for="exp-date">Vencimento</label>
+				</div>
+				<div class="input-field col s3">
+					<input id="cvc" type="text" class="validate" autocomplete="cc-csc">
+					<label for="cvc">Código</label>
+				</div>
 			</div>
 		</div>
+		
 
 		<button class="btn waves-effect waves-light">Pagar</button>
 	</form>
